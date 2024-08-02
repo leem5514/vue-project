@@ -4,7 +4,8 @@ import {createRouter, createWebHistory} from 'vue-router';
 // import 요소가 여러개 있는 경우 {} 사용
 // import HomeComponent from '@/components/HomeComponent.vue';
 // import TestComponent from '@/components/TestComponent.vue';
-import VuetifyComponent from '@/components/practice/VuetifyComponent'
+
+import { practiceRouter } from './practiceRouter';
 const routes = [
     // {
     //     // path 으로도 라우팅이 가능하고, name으로도 라우팅이 가능
@@ -19,12 +20,7 @@ const routes = [
     //     name: 'Test',
     //     component: TestComponent
     // },
-    {
-        path: '/practice/vuetify',
-        name: 'VuetifyComponent',
-        component: VuetifyComponent
-    }
-    
+    ...practiceRouter
 ]
 
 const router = createRouter({
