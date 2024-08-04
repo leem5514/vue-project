@@ -1,9 +1,12 @@
 <template>
     <h1>Conditional Component</h1>
     
-    <button @click="login">로그인하기</button>
+
     <div v-if="isLoginded">환영합니다 땡규님</div>
     <div v-else>로그인이 후 이용가능</div>
+    <v-btn @click="login">로그인</v-btn>
+    <br>
+    <v-btn @click="logout">로그아웃</v-btn>
 
     <h1>상품목록조회</h1>
     <ul>
@@ -24,10 +27,14 @@ export default{
             ],
         }
     },
-    methods: {
-        click() {
-            this.isLogined = true
+    methods:{
+        login(){
+            this.isLogined = true;
+        },
+        
+        logout(){
+            this.isLogined = false;
         }
-    },
+    }
 }
 </script>
