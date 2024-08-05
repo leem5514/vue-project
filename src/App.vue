@@ -1,7 +1,8 @@
 <template> 
   <!-- router-view 을 통해서 app.vue 에서 화면 라우팅 -->
-  <!-- <HeaderComponent /> -->
+  
   <v-app>
+    <HeaderComponent />
     <v-main>
       <router-view /> <!-- 이름 무결성 router-view-->
     </v-main>
@@ -18,13 +19,14 @@
 
 // import 하고 사용하지 않으면 오류 발생
 //import HelloWorld from './components/HelloWorld.vue'
-// import HeaderComponent from './components/HeaderComponent.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
 // import FooterComponent from './components/FooterComponent.vue'
 export default {
   name: 'App',
   components: {
     //HelloWorld
-    // HeaderComponent, FooterComponent
+    HeaderComponent
+    // FooterComponent
   }
 }
 </script>
